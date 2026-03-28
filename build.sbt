@@ -136,7 +136,7 @@ lazy val commonSettings = Seq(
 )
 
 lazy val testDeps = List(
-  "org.scalatest" %% "scalatest-freespec" % "3.2.19" % Test,
+  "org.scalatest" %% "scalatest-freespec" % "3.2.20" % Test,
 )
 
 lazy val stableVersion = taskKey[String]("stableVersion")
