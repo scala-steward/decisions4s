@@ -47,7 +47,7 @@ lazy val `decisions4s-dmn-to-image` = (project in file("decisions4s-dmn-to-image
   .settings(commonSettings)
   .settings(
     libraryDependencies ++= Seq(
-      "org.seleniumhq.selenium" % "selenium-java"    % "4.43.0",
+      "org.seleniumhq.selenium" % "selenium-java"    % "4.44.0",
       "io.github.bonigarcia"    % "webdrivermanager" % "6.3.4",
     ),
     libraryDependencies ++= Seq(
