@@ -46,8 +46,11 @@ jobs:
       - name: Build
         run: |
           cd ../
-          sbt -batch -error --no-colors 'print decisions4s-core / stableVersion' # something unexpected gets added to stdout on first run
-          export DECISIONS4S_VERSION=$(sbt -batch -error --no-colors 'print decisions4s-core / stableVersion' | head -n 1)
+          # sbt stdout is not machine-readable (ANSI escapes, progress lines), so the
+          # version is written to a file by the build instead of being parsed from stdout.
+          sbt -batch writeStableVersion
+          export DECISIONS4S_VERSION=$(cat target/stable-version.txt)
+          echo "Building website for decisions4s $DECISIONS4S_VERSION"
           cd website
           yarn build
       - name: Setup Pages
