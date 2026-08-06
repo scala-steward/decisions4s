@@ -46,7 +46,7 @@ jobs:
       - name: Build
         run: |
           cd ../
-          sbt -batch -error 'print stableVersion' # something unexpected gets added to stdout on first run
+          sbt -batch -error --no-colors 'print decisions4s-core / stableVersion' # something unexpected gets added to stdout on first run
           export DECISIONS4S_VERSION=$(sbt -batch -error --no-colors 'print decisions4s-core / stableVersion' | head -n 1)
           cd website
           yarn build
