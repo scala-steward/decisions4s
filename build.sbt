@@ -39,7 +39,7 @@ lazy val `decisions4s-cats-effect` = (project in file("decisions4s-cats-effect")
   .dependsOn(`decisions4s-core`)
   .settings(
     libraryDependencies ++= Seq(
-      "org.typelevel" %% "cats-effect" % "3.7.0",
+      "org.typelevel" %% "cats-effect" % "3.7.1",
     ),
   )
 
@@ -47,7 +47,7 @@ lazy val `decisions4s-dmn-to-image` = (project in file("decisions4s-dmn-to-image
   .settings(commonSettings)
   .settings(
     libraryDependencies ++= Seq(
-      "org.seleniumhq.selenium" % "selenium-java"    % "4.47.0",
+      "org.seleniumhq.selenium" % "selenium-java"    % "4.48.0",
       "io.github.bonigarcia"    % "webdrivermanager" % "6.3.4",
     ),
     libraryDependencies ++= Seq(
